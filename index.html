@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Charbie Pong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Password Screen -->
+    <div id="password-screen" class="overlay">
+        <div class="modal">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Password">
+            <button id="password-btn">Enter</button>
+            <p id="password-error" class="error"></p>
+        </div>
+    </div>
+
+    <!-- Setup Screen (Only shows on PC) -->
+    <div id="setup-screen" class="overlay hidden">
+        <div class="modal">
+            <h2>Select Mode</h2>
+            <button id="btn-1p">1 Player</button>
+            <button id="btn-2p">2 Players</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+        <div id="scoreboard">
+            <span id="score-p1">0</span> - <span id="score-p2">0</span>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
