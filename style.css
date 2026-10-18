@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    touch-action: none; /* Prevents mobile pull-to-refresh and zooming */
+}
+
+/* Overlays & Modals */
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(18, 18, 18, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    background: #242424;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+input, button {
+    padding: 0.8rem 1.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input {
+    background: #333;
+    color: #fff;
+    outline: none;
+}
+
+button {
+    background: #e0e0e0;
+    color: #121212;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.1s, background 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background: #ffffff;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    height: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Game Interface */
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#scoreboard {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    letter-spacing: 1.5rem;
+    color: #888;
+    z-index: 1;
+}
+
+canvas {
+    background: #1e1e1e;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    max-width: 95%;
+    max-height: 80%;
+    border-radius: 8px;
+}
